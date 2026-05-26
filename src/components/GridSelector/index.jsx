@@ -1,17 +1,17 @@
 const GridSelector = ({ setSelectedGrid }) => {
     const options = [
         {
-            id: "tianzige",
+            id: "4",
             name: "田字格",
             description: "4 cuadrantes",
         },
         {
-            id: "mizige",
+            id: "4-diagonal",
             name: "米字格",
             description: "Con diagonales",
         },
         {
-            id: "jiugongge",
+            id: "9",
             name: "九宫格",
             description: "9 cuadrantes",
         }
