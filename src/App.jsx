@@ -23,28 +23,52 @@ function App() {
   const [selectedGrid, setSelectedGrid] = useState("4-diagonal");
   const sheetRef = useRef();
   return (
-    <>
-      <SearchBar onSearch={onSearch} />
-      <CharactersList characters={characters} onDelete={onDelete} />
-      <GridSelector setSelectedGrid={setSelectedGrid} />
-      <button
-        onClick={() =>
-          generatePDF(sheetRef.current)
-        }
-      >
-        Exportar PDF
-      </button>
-      <div
-        className="sheet-container"
-        ref={sheetRef}
-      >
-        <PracticeSheet
+    <div className="app">
+
+      <div className="controls">
+
+        <SearchBar onSearch={onSearch} />
+
+        <CharactersList
           characters={characters}
-          option={selectedGrid}
-          repetitions={15}
+          onDelete={onDelete}
         />
+
+        <GridSelector
+          setSelectedGrid={setSelectedGrid}
+        />
+
+        <button
+          className="export-button"
+          onClick={() =>
+            generatePDF(sheetRef.current)
+          }
+        >
+          Exportar PDF
+        </button>
+
       </div>
-    </>
+
+      <div className="preview-section">
+
+        <div className="preview-label">
+          Preview
+        </div>
+
+        <div
+          className="sheet-container"
+          ref={sheetRef}
+        >
+          <PracticeSheet
+            characters={characters}
+            option={selectedGrid}
+            repetitions={17}
+          />
+        </div>
+
+      </div>
+
+    </div>
   )
 }
 

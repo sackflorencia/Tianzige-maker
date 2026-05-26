@@ -1,4 +1,9 @@
-const GridSelector = ({ setSelectedGrid }) => {
+import "./gridSelector.css";
+
+const GridSelector = ({
+    setSelectedGrid
+}) => {
+
     const options = [
         {
             id: "4",
@@ -16,18 +21,34 @@ const GridSelector = ({ setSelectedGrid }) => {
             description: "9 cuadrantes",
         }
     ];
+
     return (
-        <>
+        <div className="grid-selector">
+
             {options.map((option) => (
+
                 <button
                     key={option.id}
-                    onClick={() => setSelectedGrid(option.id)}
+                    className="grid-option"
+                    onClick={() =>
+                        setSelectedGrid(option.id)
+                    }
                 >
-                    {option.name} - {option.description}
+
+                    <span className="grid-name">
+                        {option.name}
+                    </span>
+
+                    <span className="grid-description">
+                        {option.description}
+                    </span>
+
                 </button>
+
             ))}
-        </>
+
+        </div>
     );
 };
 
-export default GridSelector
+export default GridSelector;

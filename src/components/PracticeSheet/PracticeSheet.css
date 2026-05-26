@@ -2,14 +2,16 @@
     display: flex;
     flex-direction: column;
 
-    gap: 16px;
-
-    padding: 24px;
+    gap: 24px;
 }
 
-.practice-row {
-    display: flex;
-    flex-wrap: wrap;
+.character-section {
+    display: grid;
+
+    grid-template-columns:
+        repeat(9, 120px);
 
     gap: 8px;
+
+    justify-content: center;
 }

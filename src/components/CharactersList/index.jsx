@@ -1,15 +1,27 @@
-const CharactersList = ({ characters, onDelete }) => {
+import "./charactersList.css";
+
+const CharactersList = ({
+    characters,
+    onDelete
+}) => {
+
     return (
-        <>
+        <div className="characters-list">
+
             {characters.map((character, index) => (
-                <div key={index}>
-                    <button onClick={() => onDelete(index)}>
-                        {character}
-                    </button>
-                </div>
+
+                <button
+                    key={index}
+                    className="character-chip"
+                    onClick={() => onDelete(index)}
+                >
+                    {character}
+                </button>
+
             ))}
 
-        </>
+        </div>
     );
 }
+
 export default CharactersList;

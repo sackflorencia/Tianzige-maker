@@ -6,16 +6,19 @@ import Grid from "../Grid";
 const PracticeSheet = ({
     characters,
     option,
-    repetitions = 15
+    repetitions = 17
 }) => {
 
     return (
         <div className="practice-sheet">
 
-            {characters.map((character, characterIndex) => (
+            {characters.map((
+                character,
+                characterIndex
+            ) => (
 
                 <div
-                    className="practice-row"
+                    className="character-section"
                     key={characterIndex}
                 >
 

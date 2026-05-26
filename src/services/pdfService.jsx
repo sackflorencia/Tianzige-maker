@@ -22,9 +22,7 @@ export const generatePDF = async (
     const pdfWidth =
         pdf.internal.pageSize.getWidth();
 
-    const pdfHeight =
-        (canvas.height * pdfWidth) /
-        canvas.width;
+    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
 
     pdf.addImage(
         imgData,
