@@ -1,5 +1,5 @@
 import Grid from "../Grid";
-import "./practiceGrid.css";
+import "./PracticeGrid.css";
 
 const PracticeGrid = ({ character, option }) => {
 

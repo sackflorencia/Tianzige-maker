@@ -1,4 +1,4 @@
-import "./charactersList.css";
+import "./CharactersList.css";
 
 const CharactersList = ({
     characters,

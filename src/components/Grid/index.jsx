@@ -1,4 +1,4 @@
-import "./grid.css";
+import "./Grid.css";
 
 const Grid = ({ option, children }) => {
 

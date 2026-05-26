@@ -1,4 +1,4 @@
-import "./gridSelector.css";
+import "./GridSelector.css";
 
 const GridSelector = ({
     setSelectedGrid

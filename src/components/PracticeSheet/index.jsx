@@ -1,4 +1,4 @@
-import "./practiceSheet.css";
+import "./PracticeSheet.css";
 
 import PracticeGrid from "../PracticeGrid";
 import Grid from "../Grid";
