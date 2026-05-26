@@ -1,16 +1,69 @@
-# React + Vite
+# TiangZiGe Maker
+TiangZiGe Maker es una aplicación web para generar hojas de práctica de escritura china directamente desde el navegador.  
+Permite crear plantillas personalizadas, previsualizar el resultado en tiempo real y exportarlo como PDF listo para imprimir.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Demo
+[https://tianzige-maker.netlify.app/](https://tianzige-maker.netlify.app/)
 
-Currently, two official plugins are available:
+## Funcionalidades
+Actualmente la aplicación permite:
+- Ingresar una cantidad ilimitada de caracteres
+- Eliminar caracteres dinámicamente
+- Elegir entre 3 tipos de cuadrículas:
+  - 田字格: 4 cuadrantes
+  - 九宫格: 9 cuadrantes
+  - 米字格: 4 cuadrantes con diagonales
+- Ver una previsualización en tiempo real
+- Exportar la hoja como PDF
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías utilizadas
+Este proyecto fue desarrollado utilizando:
+- React
+- HTML2Canvas
+- jsPDF
+- CSS
 
-## React Compiler
+## Instalación
+Clonar el repositorio:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+git clone https://github.com/sackflorencia/Tianzige-maker.git
+```
 
-## Expanding the ESLint configuration
+Entrar a la carpeta del proyecto:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+cd tianzige-maker
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Iniciar el entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+## Cómo usarlo
+1. Ingresar uno o varios caracteres chinos
+2. Seleccionar el tipo de cuadrícula
+3. Visualizar la previsualización generada
+4. Exportar el resultado como PDF
+
+## Próximas mejoras
+- Mejorar el sistema de grids para que sea completamente responsive
+- Separar la hoja visible de la hoja utilizada para exportación, evitando conflictos con HTML2Canvas
+- Agregar exportación a PNG
+- Validar que únicamente se ingresen caracteres chinos
+- Soporte para frases completas: Permitir que caracteres pertenecientes a una misma palabra o frase permanezcan en la misma línea
+- Generación automática de pinyin
+- Guías visuales de orden de trazos
+- Traducción automática con selección de idioma
+- Listas predefinidas de práctica: HSK 1, HSK 2, HSK 3, HSK 4, HSK 5, HSK 6, Comidas, Familia, Verbos comunes, Frases básicas
+
+## Autor
+Desarrollado por Florencia Sack.
