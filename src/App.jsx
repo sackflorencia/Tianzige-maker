@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -7,6 +7,7 @@ import SearchBar from './components/SearchBar'
 import CharactersList from './components/CharactersList'
 import GridSelector from './components/GridSelector'
 import PracticeSheet from './components/PracticeSheet'
+import { generatePDF } from "./services/pdfService";
 
 
 function App() {
@@ -20,16 +21,29 @@ function App() {
     setCharacters(newCharacters);
   }
   const [selectedGrid, setSelectedGrid] = useState("4-diagonal");
+  const sheetRef = useRef();
   return (
     <>
       <SearchBar onSearch={onSearch} />
       <CharactersList characters={characters} onDelete={onDelete} />
       <GridSelector setSelectedGrid={setSelectedGrid} />
-       <PracticeSheet
-        characters={characters}
-        option={selectedGrid}
-        repetitions={15}
-      />
+      <button
+        onClick={() =>
+          generatePDF(sheetRef.current)
+        }
+      >
+        Exportar PDF
+      </button>
+      <div
+        className="sheet-container"
+        ref={sheetRef}
+      >
+        <PracticeSheet
+          characters={characters}
+          option={selectedGrid}
+          repetitions={15}
+        />
+      </div>
     </>
   )
 }
